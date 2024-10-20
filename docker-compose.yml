@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver-db
+    environment:
+      ACCEPT_EULA: "Y"  # Aceptar el acuerdo de licencia
+      SA_PASSWORD: "Clabe#2024"  # Cambia la contraseña por una segura
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "Clabe#2024", "-Q", "SELECT 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  java-backend:
+    build:
+      context: ./app-spring-boot
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:sqlserver://sqlserver-db:1433;databaseName=tempdb;encrypt=false"
+      SPRING_DATASOURCE_USERNAME: "sa"
+      SPRING_DATASOURCE_PASSWORD: "Clabe#2024"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-network
+    
+  angular-app:
+    build:
+      context: ./app-ng
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

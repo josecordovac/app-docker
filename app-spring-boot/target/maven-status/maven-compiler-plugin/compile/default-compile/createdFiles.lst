@@ -1,0 +1,5 @@
+com\software\app\infraestructura\datos\repositorios\ProductoRepository.class
+com\software\app\dominio\entidades\jpa\Producto.class
+com\software\app\presentacion\controladores\ProductoController.class
+com\software\app\aplicacion\servicios\ProductoService.class
+com\software\app\AppApplication.class
