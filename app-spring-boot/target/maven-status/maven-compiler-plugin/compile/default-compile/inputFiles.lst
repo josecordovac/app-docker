@@ -1,6 +1,7 @@
-C:\fuentes\github\app\src\main\java\com\software\app\aplicacion\servicios\ProductoService.java
-C:\fuentes\github\app\src\main\java\com\software\app\AppApplication.java
-C:\fuentes\github\app\src\main\java\com\software\app\configuracion\CorsConfig.java
-C:\fuentes\github\app\src\main\java\com\software\app\dominio\entidades\jpa\Producto.java
-C:\fuentes\github\app\src\main\java\com\software\app\infraestructura\datos\repositorios\ProductoRepository.java
-C:\fuentes\github\app\src\main\java\com\software\app\presentacion\controladores\ProductoController.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\aplicacion\entidades\Producto.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\aplicacion\servicios\ProductoService.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\AppApplication.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\configuracion\CorsConfig.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\dominio\entidades\jpa\Producto.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\infraestructura\datos\repositorios\ProductoRepository.java
+C:\fuentes\docker\app\app-spring-boot\src\main\java\com\software\app\presentacion\controladores\ProductoController.java

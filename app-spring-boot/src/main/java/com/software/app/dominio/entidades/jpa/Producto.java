@@ -1,53 +1,24 @@
 package com.software.app.dominio.entidades.jpa;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Entity  // Indica que es una entidad JPA
 @Table(name = "productos")  // Nombre de la tabla que se generará
 public class Producto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Generación automática del ID
-    private int id;
-
+    private Long id;
     private String nombre;
     private String descripcion;
     private double precio;
 
     // Getters y Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getName() { return nombre; }
+    public void setName(String nombre) { this.nombre = nombre; }
+    public String getDescription() { return descripcion; }
+    public void setDescription(String descripcion) { this.descripcion = descripcion; }
+    public double getPrice() { return precio; }
+    public void setPrice(double precio) { this.precio = precio; }
 }

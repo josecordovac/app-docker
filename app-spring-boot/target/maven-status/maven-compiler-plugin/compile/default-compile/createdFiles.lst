@@ -1,5 +1,8 @@
+com\software\app\configuracion\CorsConfig$1.class
 com\software\app\infraestructura\datos\repositorios\ProductoRepository.class
 com\software\app\dominio\entidades\jpa\Producto.class
+com\software\app\configuracion\CorsConfig.class
+com\software\app\aplicacion\entidades\Producto.class
 com\software\app\presentacion\controladores\ProductoController.class
 com\software\app\aplicacion\servicios\ProductoService.class
 com\software\app\AppApplication.class
